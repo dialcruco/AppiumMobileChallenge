@@ -12,7 +12,8 @@ public class ImdbTests extends BaseMobileTest {
         Logger.info("*Test: Search a movie and check if the overview info of the movie is correct.");
         loginScreen.skipSignIn();
         globalNavigationScreen.goToSearchOption();
-        searchScreen.searchMovie("Space Jam");
+        searchScreen.searchMovie("Space Jam")
+                .selectFirstMovie();
         Assert.assertEquals("In a desperate attempt to win a basketball match and earn their freedom, the Looney Tunes seek the aid of retired basketball champion, Michael Jordan.", movieScreen.getOverview());
     }
 
@@ -22,7 +23,7 @@ public class ImdbTests extends BaseMobileTest {
         loginScreen.clickInSignInWithGoogle();
         globalNavigationScreen.goToSearchOption();
         searchScreen.searchMovie("Red Notice")
-                        .selectFirstMovie();
+                .selectFirstMovie();
         movieScreen.addToWatchlist();
         globalNavigationScreen.goToYouOption();
         youScreen.goToSeeAllOption();
