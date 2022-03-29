@@ -3,6 +3,7 @@ package Adapter.Screens;
 import Adapter.Bases.BaseMobileScreen;
 import Core.By;
 import Core.MobileElement;
+import org.pmw.tinylog.Logger;
 
 public class PopUps extends BaseMobileScreen {
 
@@ -14,10 +15,12 @@ public class PopUps extends BaseMobileScreen {
     }
 
     public void denyLocation(){
+        Logger.info("Denying the location permission to the app...");
         findMobileElement(denyButton).click();
     }
 
     public void acceptIMDbNotification(){
+        Logger.info("Accepting notifications permission of the app in emulator...");
         findMobileElement(okButton).click();
     }
 }

@@ -3,6 +3,7 @@ package Adapter.Screens;
 import Adapter.Bases.BaseMobileScreen;
 import Core.By;
 import Core.MobileElement;
+import org.pmw.tinylog.Logger;
 
 public class GlobalNavigationScreen extends BaseMobileScreen {
 
@@ -16,18 +17,22 @@ public class GlobalNavigationScreen extends BaseMobileScreen {
     }
 
     public void goToHomeOption(){
+        Logger.info("Going to Home Option...");
         findMobileElement(homeIcon).click();
     }
 
     public void goToSearchOption(){
+        Logger.info("Going to Search Option...");
         findMobileElement(searchIcon).click();
     }
 
     public void goToVideoOption(){
+        Logger.info("Going to Video Option...");
         findMobileElement(videoIcon).click();
     }
 
     public void goToYouOption(){
+        Logger.info("Going to You Option...");
         findMobileElement(youIcon).click();
     }
 

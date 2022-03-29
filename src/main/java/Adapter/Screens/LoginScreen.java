@@ -4,6 +4,7 @@ import Adapter.Bases.BaseMobileScreen;
 import Core.By;
 import Core.MobileElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.pmw.tinylog.Logger;
 
 public class LoginScreen extends BaseMobileScreen {
 
@@ -18,14 +19,17 @@ public class LoginScreen extends BaseMobileScreen {
     }
 
     public void skipSignIn(){
+        Logger.info("Skipping the Login option...");
         findMobileElement(notNowButton).click();
     }
 
     public void clickInSignInWithImdbButton(){
+        Logger.info("Clicking the option: \"Sign In With IMDB...\"");
         findMobileElement(signInWithImdbButton).click();
     }
 
     public void clickInSignInWithGoogle(){
+        Logger.info("Clicking the option: \"Sign In With Google...\"");
         findMobileElement(signInWithGoogleButton).click();
         findMobileElement(trailerItem);
     }
